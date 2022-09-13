@@ -1,0 +1,22 @@
+{
+    "name": "woc-ui",
+    "version": "1.0.3",
+    "description": "",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "tsc",
+        "bump": "npm version patch",
+        "publish": "npm run build && npm run bump && npm publish"
+    },
+    "keywords": [],
+    "author": "OscarWeb <web.oscar.code@gmail.com>",
+    "license": "ISC",
+    "files": [
+        "dist/**/*"
+    ],
+    "devDependencies": {
+        "typescript": "4.8.3"
+    }
+}
