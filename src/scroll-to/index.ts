@@ -4,8 +4,8 @@ export type WOCScrollToOptions = {
 export class WOCScrollTo {
   private _gap: number;
   private _behavior: ScrollBehavior = 'smooth';
-  constructor(options: WOCScrollToOptions) {
-    this._gap = options.gap || 0;
+  constructor(public options?: WOCScrollToOptions) {
+    this._gap = options?.gap || 0;
   }
   public scrollTo(element: HTMLElement): void {
     if (!element) {
