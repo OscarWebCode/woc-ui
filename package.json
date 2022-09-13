@@ -1,22 +1,27 @@
 {
-    "name": "woc-ui",
-    "version": "1.0.3",
-    "description": "",
-    "main": "dist/index.js",
-    "types": "dist/index.d.ts",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "tsc",
-        "bump": "npm version patch",
-        "publish": "npm run build && npm run bump && npm publish"
-    },
-    "keywords": [],
-    "author": "OscarWeb <web.oscar.code@gmail.com>",
-    "license": "ISC",
-    "files": [
-        "dist/**/*"
-    ],
-    "devDependencies": {
-        "typescript": "4.8.3"
-    }
+  "name": "woc-ui",
+  "version": "1.0.3",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "bump": "npm version patch",
+    "publish": "npm run build && npm run bump && npm publish",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json"
+  },
+  "keywords": [],
+  "author": "OscarWeb <web.oscar.code@gmail.com>",
+  "license": "ISC",
+  "files": [
+    "dist/**/*"
+  ],
+  "devDependencies": {
+    "prettier": "^2.7.1",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "4.8.3"
+  }
 }
