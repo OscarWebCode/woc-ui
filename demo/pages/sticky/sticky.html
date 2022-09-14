@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll</title>
+    <script src="../../bundle.js"></script>
+    <style>
+      /* Demo Styles */
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        padding-top: 100px;
+        display: block;
+        position: relative;
+      }
+      main {
+        height: 2000px;
+        background-color: darksalmon;
+      }
+      header {
+        width: 100%;
+        min-height: 100px;
+        border-bottom: 2px solid #000;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      header .fixed {
+        display: none;
+      }
+    </style>
+    <style>
+      /* Sticky Styles */
+      body.sticky main {
+        background-color: aquamarine;
+        transition: 0.3s;
+      }
+      header.sticky {
+        position: fixed;
+        min-height: 50px;
+      }
+      header.sticky .absolute {
+        display: none;
+      }
+      header.sticky .fixed {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>StickyPage</h1>
+    <button id="btn">destroy()</button>
+    <header id="header">
+      <div class="absolute">I'm Absolute</div>
+      <div class="fixed">I'm Fixed</div>
+    </header>
+    <main></main>
+  </body>
+</html>

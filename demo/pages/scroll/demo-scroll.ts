@@ -1,4 +1,4 @@
-import { WOCScrollTo } from '../../src/index';
+import { WOCScrollTo } from '../../../src/index';
 export class DemoScrollPage {
   private _wocScroll: WOCScrollTo;
   constructor() {
