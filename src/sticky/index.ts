@@ -65,24 +65,31 @@ export class WOCSticky {
 
   private _enableStickyHeader(): void {
     if (this._enabled) return;
-    this._toggleClasses();
+    this._addClasses();
     this._defaultAnimation && this._setDefaultAnimation();
     this._enabled = true;
   }
 
   private _disableStickyHeader(): void {
     if (!this._enabled) return;
-    this._toggleClasses();
+    this._removeClasses();
     this._defaultAnimation && this._resetDefaulAnimation();
     this._enabled = false;
   }
 
-  private _toggleClasses(): void {
-    this._element.classList.toggle(this._className);
-    document.body.classList.toggle(this._className);
+  private _addClasses(): void {
+    this._element.classList.add(this._className);
+    document.body.classList.add(this._className);
+  }
+
+  private _removeClasses(): void {
+    this._element.classList.add(this._className);
+    document.body.classList.add(this._className);
   }
 
   public destroy(): void {
+    this._removeClasses();
+    this._resetDefaulAnimation();
     window.removeEventListener('scroll', this._windowScrollHandler);
   }
 
