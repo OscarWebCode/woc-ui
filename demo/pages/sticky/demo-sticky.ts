@@ -3,7 +3,12 @@ export class DemoStickyPage {
   private _wocSticky: WOCSticky;
   constructor() {
     const headerElement: HTMLElement = document.getElementById('header') as HTMLElement;
-    this._wocSticky = new WOCSticky({ element: headerElement, scrollHeight: 100, className: 'sticky' });
+    this._wocSticky = new WOCSticky({
+      element: headerElement,
+      scrollHeight: 100,
+      className: 'sticky',
+      defaultAnimation: true,
+    });
     this._bindDestroy();
   }
 

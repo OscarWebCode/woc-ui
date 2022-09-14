@@ -43,8 +43,8 @@
         background-color: aquamarine;
         transition: 0.3s;
       }
+
       header.sticky {
-        position: fixed;
         min-height: 50px;
       }
       header.sticky .absolute {
@@ -54,6 +54,23 @@
         display: block;
       }
     </style>
+    <!-- <style>
+      /* Reusable styles */
+      header.sticky {
+        animation: fade-in-from-top 0.5s ease 0.3s;
+        animation-fill-mode: forwards;
+        position: fixed;
+        translate: 0 -100%;
+      }
+      @keyframes fade-in-from-top {
+        0% {
+          translate: 0 -100%;
+        }
+        100% {
+          translate: 0 0;
+        }
+      }
+    </style> -->
   </head>
   <body>
     <h1>StickyPage</h1>
