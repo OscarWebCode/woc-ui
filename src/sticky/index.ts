@@ -32,7 +32,8 @@ export class WOCSticky {
   private _controlSticky(): void {
     if (window.scrollY > this.options.scrollHeight) {
       this._enableStickyHeader();
-    } else {
+    }
+    if (window.scrollY === 0) {
       this._disableStickyHeader();
     }
   }
