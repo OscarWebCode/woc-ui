@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll</title>
+    <script src="../../bundle.js"></script>
+    <style>
+      /* Demo Styles */
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+      }
+      #tabs {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      .actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      [data-tab] {
+        border: 1px solid #000;
+        padding: 4px 8px;
+        cursor: pointer;
+      }
+      [data-tab].active {
+        color: #fff;
+        background-color: #000;
+      }
+      [data-content]:not(.active) {
+        display: none;
+      }
+      [data-content] {
+        border: 1px solid #000;
+        border-top: none;
+        padding: 4px 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>TabsPage</h1>
+    <div id="tabs">
+      <div class="actions">
+        <div data-tab="one">1</div>
+        <div data-tab="two">2</div>
+        <div data-tab="three">3</div>
+      </div>
+      <div class="content">
+        <div data-content="one">One</div>
+        <div data-content="two">Two</div>
+        <div data-content="three">Three</div>
+      </div>
+    </div>
+  </body>
+</html>
